@@ -1,0 +1,140 @@
+* {
+	box-sizing: border-box;
+}
+
+/* Style the body */
+body {
+	margin: 0;
+}
+
+/* Column container */
+.row {
+	display: -ms-flexbox; /* IE10 */
+	display: flex;
+	-ms-flex-wrap: wrap; /* IE10 */
+	flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+	-ms-flex: 30%; /* IE10 */
+	flex: 1%;
+	/* background-color: #524d70; */
+	padding: 20px;
+}
+
+.side > #sideIcons {
+	position: relative;
+	top: 20%;
+}
+.side > #sideIcons > i {
+	display: flex;
+	display: block;
+	text-align: center;
+	margin-bottom: 25px;
+	font-size: 35px;
+}
+
+.side > #sideIcons > i:hover {
+	opacity: 0.5;
+}
+
+#logoTitle h2 {
+	position: fixed;
+	font-size: 15px;
+	margin: 20px;
+	color: #fff;
+	top: -15px;
+	left: 35px;
+}
+#logoTitle p {
+	position: fixed;
+	font-size: 15px;
+	left: 55px;
+	top: 5px;
+	color: #fff;
+}
+#myLogo {
+	position: fixed;
+	width: 50px;
+	top: 5px;
+	left: 1px;
+}
+.middle {
+	-ms-flex: 30%; /* IE10 */
+	flex: 30%;
+	z-index: 1;
+	background-color: rgb(255, 72, 72);
+	padding: 20px;
+	background-image: url(./middleImages/aviv.jpg);
+	background-position: center;
+	background-size: cover;
+	box-shadow: 0px 4px 80px 50px rgba(0, 0, 0, 0.5),
+		0 6px 20px 20px rgba(0, 0, 0, 0.19), 0 4px 8px 0 rgba(0, 0, 0, 0.5),
+		0 8px 8px 0px rgba(0, 0, 0, 0.5);
+}
+
+.middle > h1,
+.middle > h5 {
+	position: relative;
+	text-align: center;
+	top: 80%;
+	color: #fff;
+	margin: 5px;
+}
+.middle > h1 {
+	font-size: 50px;
+	font-weight: lighter;
+	font-family: "Roboto", sans-serif;
+	letter-spacing: 5px;
+	color: #f7ede2;
+}
+.middle > h5 {
+	font-size: 20px;
+	font-weight: lighter;
+	font-family: "Roboto", sans-serif;
+}
+/* Main column */
+.main {
+	-ms-flex: 60%; /* IE10 */
+	flex: 50%;
+	/* background-color: #524d70; */
+	padding: 20px;
+}
+
+/* Fake image, just for this example */
+.fakeimg {
+	background-color: #aaa;
+	width: 100%;
+	padding: 20px;
+}
+
+/* Footer */
+.footer {
+	padding: 20px;
+	text-align: center;
+	/* background: #524d70; */
+}
+/* .footer > h2{
+          font-size: 20px;
+          margin: 0;
+        }
+        .footer > p{
+           margin: 0;
+        } */
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+	.row {
+		flex-direction: column;
+	}
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+	.navbar a {
+		float: none;
+		width: 100%;
+	}
+}
